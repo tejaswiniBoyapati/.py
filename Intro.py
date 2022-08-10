@@ -19,3 +19,20 @@ print(a+b)
 print(type('c'))
 c=100
 type(c)
+
+###
+x=input()
+y=input()
+s = x+ y
+print(s)         # here, x and y are taken as strings by input (default)
+
+# to convert str into number
+x=int(input())
+y=int(input())
+s = x+y      
+print(s)  
+                             # OR #
+x= input()
+y=input()
+s=int(x) + int(y)
+print(s)           
