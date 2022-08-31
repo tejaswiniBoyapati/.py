@@ -8,6 +8,7 @@ Created on Sat Aug 27 13:20:45 2022
 #creation of list
 li = []  #empty list
 print(type(li))
+print(len(li))    #size of empty list is 0
 li= [1,2,3,"data",3,4]
 print(li)
 
@@ -19,7 +20,7 @@ print(li[2])
 print(li[-1]) #negative numbering to access from end of the list
 
 """
-changing if elements of a list
+changing elements of a list
 """
 li[4]="vizualisation"
 print(li)
@@ -47,7 +48,7 @@ li.append("Ankush")
 print(li)
 
 """
-To insert at some particular index without earsing the previous value , we use insert(index_no,value to be inserted)
+To insert at some particular index without earsing the previous value , we use insert(index_no,value to be inserted) 
 """
 li.insert(1,"hihi")
 
@@ -101,7 +102,49 @@ print(li)
 #li.pop(1000)    #error, coz no such index
 #print(li)
 
-#E
+#looping on lists
+"""
+1. using range()
+2. (a) for i in li:        (direct loop in that list)
+   (b)  for i in li[2:]    (slicing part, to start from particular index)
+"""
+for i in range(len(li)):
+    print(li[i])
+for i in range(2,len(li)):
+    print(li[i])
+for x in li:
+    print(x)
+for x in li[2:]:
+    print(x)
+    
+#negative indexing in list
+print(li[-1])  #prints last element
+#print(li[-100])  #error coz no such index
 
+# sequencing in list 
+"""
+li[start:end:step]  by default, start --> 0, end --> len of list , step -->1
+"""
+print(li[1:5:1])
+print(li[1::])  
+print(li[::])
+print(li[:3]) # --> start = 1, end=2, step =1
 
+#Taking input in list
+"""
+1. Line separated Input of elements in a List
+"""
+#EXAMPLE 1:
+n=int(input())
+lala=[]
+for i in range(n):
+    curr=int(input())   #int will considered
+    lala.append(curr)
+print(lala)
 
+#EXAMPLE 2:
+n1 = int(input())
+lis = []
+for i in range(n1):
+    lis.append(input())   #input will be in the form of ana integer
+print(lis)
