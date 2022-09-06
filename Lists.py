@@ -91,7 +91,7 @@ print(li)
 #print(li)
 
 #removing element at particular index                            -- pop()
-li.pop()   #if no index position is mentioned, then element present at the 
+li.pop()   #if no index position is mentioned, then element present at the last index will be poped.
 
 print(li)
 
@@ -128,23 +128,55 @@ li[start:end:step]  by default, start --> 0, end --> len of list , step -->1
 print(li[1:5:1])
 print(li[1::])  
 print(li[::])
-print(li[:3]) # --> start = 1, end=2, step =1
+print(li[:3]) # --> start = 0, end=2=(3-1), step =1
 
 #Taking input in list
 """
 1. Line separated Input of elements in a List
+2. Space separated Input of element in a list
+"""
+"""
+1. Line separated input
 """
 #EXAMPLE 1:
 n=int(input())
 lala=[]
 for i in range(n):
     curr=int(input())   #int will considered
-    lala.append(curr)
+    lala[i]=curr #lala.append(curr)
 print(lala)
 
 #EXAMPLE 2:
 n1 = int(input())
 lis = []
 for i in range(n1):
-    lis.append(input())   #input will be in the form of ana integer
+    lis.append(int(input()))#input will be in the form of an integer
 print(lis)
+
+"""
+2. Space separated Input
+"""
+#using split with a delimitter  {--> default delimitter --> space " "}
+n=int(input())
+lis1=[]
+str=input()
+str_split=str.split(",")     #delimitter of split --> ,
+for x in str_split:
+    lis1.append(int(x))
+print(lis1)
+
+# simpler way
+listt=[int(x) for x in input().split()]
+print(listt)
+
+#to print the elements in the list in each new line
+for x in listt:
+    print(x)
+
+### complete snippet in simpler way
+n=int(input())
+li= [int(x) for x in input().split()]  #default delimmiter --> space
+for ele in li:
+    print(ele)
+    
+    
